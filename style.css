@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.seat {
+  @apply w-8 h-8 m-1 cursor-pointer transition-all duration-200 rounded text-xs flex items-center justify-center font-semibold;
+}
+
+.seat-available {
+  @apply bg-gray-200 hover:bg-blue-400 hover:text-white border border-gray-300;
+}
+
+.seat-selected {
+  @apply bg-blue-500 text-white border border-blue-600;
+}
+
+.seat-taken {
+  @apply bg-gray-500 text-gray-300 cursor-not-allowed border border-gray-600;
+}
+
+.seat-progress {
+  @apply bg-yellow-300 text-gray-700 cursor-not-allowed border border-yellow-400;
+}
+
+.screen {
+  @apply w-4/5 h-16 bg-gray-800 mx-auto rounded-t-3xl relative mb-8;
+}
+
+.screen::after {
+  content: '';
+  @apply absolute -bottom-8 left-0 w-full h-8 bg-gradient-to-b from-gray-800/20 to-transparent;
+}
+
+#seat-layout {
+  @apply py-8 px-4 overflow-x-auto;
+}
+
+#movie-info {
+  @apply mb-8 shadow-xl;
+}
+
+#booking-info {
+  @apply sticky top-0 bg-white z-10 shadow-sm py-4 px-6 rounded-t-lg;
+}
